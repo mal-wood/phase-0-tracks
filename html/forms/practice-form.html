@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="success.html" method="post">
+  <div>
+  	<label> Burger Type:</label>
+    <select name="burgertype">
+    	<option value="beef">Beef</option>
+    	<option value="cheeseburger">Cheeseburger</option>
+    	<option value="veggie">Veggie</option>
+    </select>
+  </div>
+  <div>
+  	<label>What toppings would you like on your burger?<br>
+    	<textarea name="toppings">
+    	</textarea>
+	</label>
+  </div>
+  <div>
+  	<label>Pickup Time:</label>
+  	<input type="time" name="time"> 
+  </div>
+  <div>
+  	<label>Extra Toppings:</label><br>
+  	<input type="checkbox" name="extratoppings" value="bacon">Bacon<br>
+  	<input type="checkbox" name="extratoppings" value="avacado">Avacado<br>
+  	<input type="checkbox" name="extratoppings" value="grilledonions">Grilled Onions<br>
+  </div>
+  <div>
+  	<label>Number of Burgers:</label>
+  	<input type="number" name="quantity" min="1" max="5">
+  </div>
+  <button type="submit">Place Order</button>
+</form>
+</body>
+</html>
