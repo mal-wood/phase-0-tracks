@@ -48,3 +48,22 @@ figcaption {
   vertical-align:top;
   min-width: 386px;
 }
+
+@media screen and (max-width: 877px) {
+  .main h1 {
+    font-size: 1.5em;
+  }
+
+  }
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 60%;
+  }
+  
+}
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
