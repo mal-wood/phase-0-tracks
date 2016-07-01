@@ -4,13 +4,13 @@
 }
 
 #glasses {
-position: absolute;
-top:210;
-left:400;
+	position: absolute;
+	top:210;
+	left:400;
 }
 
 #hat {
-position: absolute;
-top:50;
-left:340;
+	position: absolute;
+	top:50;
+	left:340;
 }
