@@ -1,3 +1,8 @@
+body{
+  max-width: 960px;
+
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -14,6 +19,12 @@ cite {
   padding-left: 0px;
 }
 
+#external-links {
+  display: inline-block;
+   vertical-align: top;
+   width: 18%;
+   min-width: 86px;
+}
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
@@ -29,4 +40,11 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+.main {
+  display: inline-block;
+  width: 78%;
+  vertical-align:top;
+  min-width: 386px;
 }
