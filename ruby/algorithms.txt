@@ -1,0 +1,25 @@
+USING AN ELEVATOR
+
+-Move forward into elevator until you reach wall
+-Rotate 180 degrees to face wall with buttons
+-Move forward and to the right to access buttons
+	-If buttons are not there, continue left along front wall until you reach buttons
+-Lift arm to press first numeric button to the bottom left
+-Pause as elevator moves to floor
+-Check floor
+	-If correct floor destination, move two feet to the side- away from the closest wall to you and move forward to exit elevator
+	-Otherwise: move finger to the right to navigate to next numeric button. If no button to the right, move up to the next row of buttons.  Repeat this until you reach correct floor. 
+
+
+MAKING A PEANUT BUTTER AND JELLY SANDWICH
+
+-Collect ingredients- peanut butter, jelly, bread
+- Open bread and take out two pieces from the bag
+- Lay pieces flat on table
+-Open peanut butter 
+-Take knife and gather some peanut butter on it
+- Place the peanut butter on one piece of bread and spread it across the entirety of the piece 
+-Open jelly container
+-Take knife and gather some jelly on it
+- Place the jelly on the other piece of bread and spread it across the entirety of the piece 
+-Take both pieces and place them together so that they line up with the jelly and peanut butter touching
