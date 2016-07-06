@@ -5,7 +5,7 @@ print "How old are you?"
 age = gets.to_i
 
 print "What year were you born?"
-year_born = gets.chomp
+year_born = gets.to_i
 
 print "Our company cafeteria serves garlic bread. Should we order some for you?"
 garlic_bread = gets.chomp
