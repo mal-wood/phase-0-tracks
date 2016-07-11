@@ -39,7 +39,7 @@ while employee_num > 0
 	 	wants_insurance = false 
 	 end
 	
-	 print "Allergies:"
+	 print "Type enter to type in allergies:"
 	 allergies = gets.chomp
 	 	until allergies == "done" 
 	 		print "List each allergy and type done when finished:"
@@ -50,14 +50,14 @@ while employee_num > 0
 
 		if !got_age_wrong && (likes_garlic_bread || wants_insurance)
 			puts "Probably not a vampire"
-		elsif got_age_wrong && ( !likes_garlic_bread || !wants_insurance)
-			puts "Probably a vampire"
-		elsif got_age_wrong && (likes_garlic_bread = false && wants_insurance = false)
+		elsif got_age_wrong && ( !likes_garlic_bread && !wants_insurance)
 			puts "Almost certainly a vampire"
+		elsif got_age_wrong && ( !likes_garlic_bread || !wants_insurance) || allergies == "sunshine"
+			puts "Probably a vampire"
 		elsif is_vampire
 			puts "Definitely a vampire"
 		else 
-			puts "Results inconclusive"
+			puts "Results inconclusive" 
 		end
 	employee_num -= 1
 	end
