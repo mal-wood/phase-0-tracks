@@ -38,3 +38,21 @@ while index < password.length
 end
 
 end
+
+# Ask user whether they would like to encrypt or decrypt
+# Ask for their password
+# Print results
+
+puts "Hi, would you like to decrypt or encrypt a password today?"
+answer = gets.chomp
+
+puts "What is your password?"
+password = gets.chomp
+
+if answer == "encrypt"
+  puts encrypt(password)
+elsif answer == "decrypt"
+  puts decrypt(password)
+else
+  puts "Please answer with encrypt or decrypt."
+end
