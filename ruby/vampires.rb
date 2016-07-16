@@ -47,14 +47,14 @@ while employee_num > 0
 	 		break if allergies == "sunshine"
 	 		end
 
-	 	if is_vampire
-			puts "Definitely a vampire"
-		elsif !got_age_wrong && (likes_garlic_bread || wants_insurance)
+	 	if !got_age_wrong && (likes_garlic_bread || wants_insurance)
 			puts "Probably not a vampire"
 		elsif got_age_wrong && ( !likes_garlic_bread && !wants_insurance)
 			puts "Almost certainly a vampire"
 		elsif got_age_wrong && ( !likes_garlic_bread || !wants_insurance) || allergies == "sunshine"
 			puts "Probably a vampire"
+	 	elsif is_vampire
+			puts "Definitely a vampire"
 		else 
 			puts "Results inconclusive" 
 		end
