@@ -16,6 +16,8 @@ complete_application[:address] = "44 Sun Drive"
 
 complete_application[:email] = "wydler@idk.com"
 
+complete_application[:wallpaper_pref] ="IDK"
+
 complete_application[:hired] = "yes"
 
 email_yeah= complete_application[:phone]
