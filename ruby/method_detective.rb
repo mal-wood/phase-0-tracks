@@ -10,6 +10,9 @@
 "zom".replace "zoom"
 # => “zoom”
 
+"zom".gsub(/[o]/, 'oo')
+# => "zoom"
+
 "enhance".center(14)
 # => "    enhance    "
 
