@@ -16,10 +16,10 @@ print "Client's name:"
 name = gets.chomp
 
 print "Age:"
-age = gets.chomp
+age = gets.chomp.to_i
 
 print "Number of children:"
-number_of_children = gets.chomp
+number_of_children = gets.chomp.to_i
 
 print "Decor theme:"
 decor_theme = gets.chomp
