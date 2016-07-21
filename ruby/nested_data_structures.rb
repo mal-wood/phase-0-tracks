@@ -25,3 +25,4 @@ art_festival = {
 p art_festival[:parking][:spots][:number_of_spots]
 p art_festival[:art_booths][:items_for_sale][2]
 p art_festival[:parking][:locations_of_lots].push("convention center")
+p art_festival[:food][:numbers][:trash_cans]
