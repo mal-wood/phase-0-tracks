@@ -56,3 +56,5 @@ end
 
 drop_array = abbreviation.drop_while {|ab| ab == "CA" }
 p drop_array 
+
+#end
