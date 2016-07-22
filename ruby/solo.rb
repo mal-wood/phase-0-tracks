@@ -5,19 +5,22 @@ new_array[0], new_array[1] = new_array[1], new_array[0]
 full_name= new_array.join(" ")
 letters= full_name.split('')
 
-vowels = ["a","e","i","o","u"]
-consonants =["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"]
+vowels = ["a","A","e","E","i","I","o","O","u","U"]
+consonants =["b","B","c","C","d","D","f","F","g","G","h","H","j","J","k","K","l","L","m","M","n","N","p","P","q","Q","r","R","s","S","t","T","v","V","w","W","x","X","y","Y","z","Z"]
 
 letters.map! do |letter|
 	if vowels.include? letter
-		new_index= vowels.index(letter) + 1
+		new_index= vowels.index(letter) + 2
 		new_letter= vowels[new_index]
 		letter=new_letter
-	end
-	if consonants.include? letter 
-		con_index= consonants.index(letter) + 1
-		con_letter= consonants[con_index]
-		letter = con_letter
+	elsif 
+		consonants.include? letter
+		new_index= consonants.index(letter) + 2
+		new_letter=consonants[new_index]
+		letter=new_letter
+	elsif letter == ' '
+		letter = ' '
 	end
 end
-puts letters
+
+letters.join
