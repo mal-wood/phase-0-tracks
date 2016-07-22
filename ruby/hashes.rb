@@ -32,9 +32,11 @@ kind_of_wallpaper = ["polka dot", "striped", "rainbow", "floral"]
 
 def wallpaper_generator(array)
 	new_array = []
-array.map! do |style|
-print "Do you like #{style} style of wallpaper? (y/n)"
+
+	array.map! do |style|
+	print "Do you like #{style} style of wallpaper? (y/n)"
 	wallpaper_pref = gets.chomp
+
 	if wallpaper_pref == "y"
 		new_array << style
 	end	
@@ -48,14 +50,15 @@ paint_colors = ["blue", "red", "green", "yellow"]
 
 def paint_generator(array)
 	positive_array = []
+
 	array.map! do |color|
 	print "Do you like the paint color #{color}? (y/n)"
-		paint_pref = gets.chomp
-		if paint_pref == "y"
-			positive_array << color
-		end
-	end
+	paint_pref = gets.chomp
 
+	if paint_pref == "y"
+			positive_array << color
+	end
+end
 	positive_array
 end
 
