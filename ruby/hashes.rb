@@ -56,7 +56,7 @@ def paint_generator(array)
 	paint_pref = gets.chomp
 
 	if paint_pref == "y"
-			positive_array << color
+		positive_array << color
 	end
 end
 	positive_array
