@@ -22,5 +22,4 @@ letters.map! do |letter|
 		letter = ' '
 	end
 end
-
 letters.join
