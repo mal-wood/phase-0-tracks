@@ -41,7 +41,7 @@ p fib
 # Release 2: Sort an Array
 # Bubble Sort!
 
-# Take an array of integers, and sort it
+# Take an array of integers, and sort it.
 
 def bubble_sort(array)
   n = array.length
