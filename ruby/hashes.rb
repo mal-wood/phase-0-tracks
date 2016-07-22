@@ -24,24 +24,6 @@ number_of_children = gets.chomp.to_i
 print "Wants walkthrough (y/n):"
 walkthrough = gets.chomp
 
-wallpaper_types = ["Paisley", "Chevrons", "Woodsy scenes", "Woodsy scenes(no squirrels)"]
-
-def wallpaper_option (kind)
-	print "Do you like #{kind} wallpaper? (y/n)?"
-	answer = gets.chomp
-
-	if answer == "y"
-		answer = true
-	elsif answer = "n"
-		answer = false
-	end
-	answer
-end
-
-wallpaper_option.each do |pref|
-	puts wallpaper_option(pref)
-
-
 
 client_info[:name] = name
 client_info[:age] = age
