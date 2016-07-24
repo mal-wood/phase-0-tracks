@@ -1,6 +1,6 @@
-print "What is your name? Type 'exit' to quit."
+print "What is your name? Type 'quit' to exit."
 while full_name = gets.chomp
-	if full_name == "exit"
+	if full_name == "quit"
 		print "Goodbye!"
 		break
 	end
