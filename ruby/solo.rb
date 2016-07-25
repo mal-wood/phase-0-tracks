@@ -1,17 +1,18 @@
+secret_name={}
+
 print "What is your name? Type 'quit' to exit."
-while full_name = gets.chomp
-	if full_name == "quit"
-		print "Goodbye!"
-		break
-	end
+	loop do 
+		full_name = gets.chomp
+		
+		break if full_name == "quit"
 
 	new_array = full_name.split(" ")
 
 	new_array[0], new_array[1] = new_array[1], new_array[0]
 
-	full_name= new_array.join(" ")
+	new_full_name= new_array.join(" ")
 
-	letters= full_name.split('')
+	letters= new_full_name.split('')
 
 	vowels = ["a","A","e","E","i","I","o","O","u","U"]
 	consonants =["b","B","c","C","d","D","f","F","g","G","h","H","j","J","k","K","l","L","m","M","n","N","p","P","q","Q","r","R","s","S","t","T","v","V","w","W","x","X","y","Y","z","Z"]
@@ -30,5 +31,10 @@ while full_name = gets.chomp
 			letter = ' '
 		end
 	end
-	 p letters.join
+	joined_letters= letters.join
+	p joined_letters
+	secret_name[full_name] = joined_letters
 end
+	secret_name.each do |name, secret|
+		print "#{secret} is actually #{name}. "
+	end
