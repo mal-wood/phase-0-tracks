@@ -75,4 +75,12 @@ end
 
 final_list(sample_list)
 
+# What did you learn about pseudocode from working on this challenge?
+I learned how important and helpful it can be.
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# What does a method return?
+# What kind of things can you pass into methods as arguments?
+# How can you pass information between methods?
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+
 
