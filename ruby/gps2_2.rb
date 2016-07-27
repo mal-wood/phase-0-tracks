@@ -28,8 +28,8 @@ p sample_list.class
 # output: hash with new key/value added
 
 def add_item(list, item, quantity)
-	list[item] = quantity
-	list 
+		list[item] = quantity
+		list 
 end 
 
 sample_list= add_item(sample_list, "blueberries", 3)
@@ -76,11 +76,21 @@ end
 final_list(sample_list)
 
 # What did you learn about pseudocode from working on this challenge?
-I learned how important and helpful it can be.
+# I learned how helpful it can be to take the time to thoughtfully organize pseudocode. Once my pseudocode was in place, it was much easier to actually jump in and write the methods.
+
 # What are the tradeoffs of using arrays and hashes for this challenge?
+# Arrays would make this challenge more complex since it would just be one data structure with a combined list of items and quantities. The key/value pairs are incredibly helpful for instances like this one- with grocery items and their quantities. It seems to make the code cleaner.   
+
 # What does a method return?
+#Whatever value is listed after 'return' (it might not read 'return' if implicit return). 
+
 # What kind of things can you pass into methods as arguments?
+#Variables, variables assigned to the return of another method, strings, integers, arrays, hashes
+
 # How can you pass information between methods?
+# Assign the return of a method to a variable and use that variable in another method. 
+
 # What concepts were solidified in this challenge, and what concepts are still confusing?
+# This helped me see more of the benefits of pseudocoding. I usually jump right into coding and end up trying a bunch of different things without having a clear map. I want to implement pseudocoding more as well as just commenting in certain areas of my code to make everything as clean and understandable as possible. 
 
 
