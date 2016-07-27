@@ -2,7 +2,7 @@ class Santa
 	attr_reader :age, :ethnicity
 	attr_accessor :gender
 
-	def initialize(gender, ethnicity, name)
+	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
 		puts "Santa's gender: #{gender}"
 		puts "Santa's ethnicity: #{ethnicity}"
@@ -29,7 +29,7 @@ class Santa
 
 
 	def eat_milk_and_cookies(cookie_type)
-		puts "That was a good xw#{cookie_type}!"
+		puts "That was a good #{cookie_type}!"
 	end
 
 end 
@@ -47,9 +47,21 @@ end
 # 	santas << Santa.new(genders[item], ethnicities[item])
 # end
 
-happy_santa = Santa.new("agender", "Chinese", "Rudolph")
-happy_santa.eat_milk_and_cookies("lemon cookies")
-happy_santa.celebrate_birthday
-happy_santa.get_mad_at("Blitzen")
-p happy_santa.gender=("bigender")
-p "Santa is #{happy_santa.age} years old and is #{happy_santa.ethnicity}"
+# happy_santa = Santa.new("agender", "Chinese", "Rudolph")
+# happy_santa.eat_milk_and_cookies("lemon cookies")
+# happy_santa.celebrate_birthday
+# happy_santa.get_mad_at("Blitzen")
+# p happy_santa.gender=("bigender")
+# p "Santa is #{happy_santa.age} years old and is #{happy_santa.ethnicity}"
+
+
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+50.times do |i|
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
+
+santas.each do |santa|
+	puts "#{santa}"
+end
