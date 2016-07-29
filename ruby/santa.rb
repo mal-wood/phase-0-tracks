@@ -1,11 +1,9 @@
 class Santa
-	attr_reader :age, :ethnicity
-	attr_accessor :gender
+	attr_reader :ethnicity
+	attr_accessor :gender, :age
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
-		puts "Santa's gender: #{gender}"
-		puts "Santa's ethnicity: #{ethnicity}"
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -14,20 +12,20 @@ class Santa
 
 	def celebrate_birthday
 		@age= @age + 1
-		puts @age
+		@age
 	end
 
 	def get_mad_at(name)
 		@name = name
-		@reindeer_ranking.insert(8, @reindeer_ranking.delete_at(@reindeer_ranking.index(name)))
-		p @reindeer_ranking
+		@reindeer_ranking = @reindeer_ranking.insert(8, @reindeer_ranking.delete_at(@reindeer_ranking.index(name)))
+		@reindeer_ranking
 	end
 
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end 
 
-
+ 
 	def eat_milk_and_cookies(cookie_type)
 		puts "That was a good #{cookie_type}!"
 	end
@@ -35,6 +33,7 @@ class Santa
 end 
 
 #Testing above methods with driver code 
+
 # kelsey = Santa.new
 # kelsey.speak
 # kelsey.eat_milk_and_cookies("sugar cookie")
@@ -54,6 +53,9 @@ end
 # p happy_santa.gender=("bigender")
 # p "Santa is #{happy_santa.age} years old and is #{happy_santa.ethnicity}"
 
+# new_santa = Santa.new("female", "American")
+# p new_santa.age
+# p new_santa.ethnicity
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -62,6 +64,10 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
   santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 end
 
-santas.each do |santa|
-	puts "#{santa}"
+santas.each do |x|
+	x.age = rand(140)
+end
+
+santas.each do |x|
+	p x.gender x.ethnicity
 end
