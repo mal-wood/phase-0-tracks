@@ -68,7 +68,8 @@ santas.each do |x|
 	x.age = rand(140)
 end
 
-p santas 
+p santas.gender
+
 # santas.each do |x|
 # 	p x.gender x.ethnicity
 # end
