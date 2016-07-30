@@ -5,12 +5,9 @@
 
 require_relative 'word_guessing'
 
-describe wordGuessing do
-
-let{:game} { wordGuessing.new}
+describe WordGuessing do
+	let(:game) { WordGuessing.new }
 
 it "replaced the given string with as many underscores as the length of the string"
-	expect(game.underscore("secret")).to eq "_ _ _ _ _ _"
-
+	expect(game.underscore("secret")).to eq "_ _ _ _ _ _ "
 end 
-end	
