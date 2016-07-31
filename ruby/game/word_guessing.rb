@@ -1,6 +1,14 @@
-class wordGuessing
-
+class WordGuessing
+	
 	def underscore(word)
-		print "_ " * word.length
+		word_array = word.split("")
+		word_array.each do |x|
+			x = "_"
+		word_array
+		end
 	end
+
+
+
 end
+
