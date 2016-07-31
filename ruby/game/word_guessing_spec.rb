@@ -9,8 +9,10 @@ describe WordGuessing do
 	let(:game) { WordGuessing.new }
 
 it "replaced the given string with as many underscores as the length of the string" do
-	expect(game.underscore("secret")).to eq "______"
+	expect(game.underscore("secret")).to eq "_ _ _ _ _ _ "
 end 
 
-it "replaced "
+it "places any correctly guessed letters into the string and returns the rest as underscores" do
+	expect(game.guess_include("s")).to eq "s _ _ _ _ _ _ "
+end
 end
