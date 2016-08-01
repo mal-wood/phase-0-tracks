@@ -1,7 +1,5 @@
 #game class
 
-#game class
-
 class WordGuessing
 
 	attr_accessor :word_array
@@ -10,6 +8,7 @@ class WordGuessing
 	def initialize 
 		@word_array = []
 		@is_over = false
+		@new_string = ""
 	end
 
 	def underscore(word)
@@ -34,15 +33,15 @@ puts "Wecome to the word guessing game! User one: please enter in a word for use
 game = WordGuessing.new
 guess = gets.chomp
 
-secret_guess = game.underscore("unicorn")
+secret_guess = game.underscore(guess)
 
-while !game.is_over
 puts "Player two, take a look at the word and guess a letter you think it might contain #{secret_guess}"
+while !game.is_over
 letter_entered = gets.chomp
 guess_with_letters = game.guess_include(letter_entered)
 p guess_with_letters
+if guess == letter_entered
+	puts "You guessed it!"
+	break
 end
-
-p guess_with_letters
-
-
+end
