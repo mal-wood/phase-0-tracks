@@ -2,32 +2,32 @@
 
 class WordGuessing
 
-	attr_accessor :word_array
+	attr_accessor :word_array, :guess_count
 	attr_reader :is_over
 
 	def initialize 
 		@word_array = []
 		@is_over = false
 		@new_string = ""
+		@guess_count = 0
 	end
 
-	#Changes each letter in inputted word to underscore and space
 	def underscore(word)
 		@word_array = word.split("")
 		secret_letters = "_ " * @word_array.length
 	end
 
-	#If correct letter is guessed, letter is added to the phrase. Other letters are filled in as an underscore.
 	def guess_include(guess)
+		new_string = ""
 		@word_array.each do |x|
 			if guess.include? x
-				@new_string << x
-				@new_string
+				new_string << x
 			else 
-				@new_string << "_ "
+				new_string << "_ "
 			end
 		end
-		@new_string
+		@guess_count +=1 
+		@new_string = new_string
 	end
 end
 
@@ -35,15 +35,19 @@ puts "Wecome to the word guessing game! User one: please enter in a word for use
 game = WordGuessing.new
 guess = gets.chomp
 
-secret_guess = game.underscore(guess)
+secret_guess = game.underscore("unicorn")
 
 puts "Player two, take a look at the word and guess a letter you think it might contain #{secret_guess}"
-while !game.is_over
+while !game.is_over && (game.guess_count < guess.length)
 letter_entered = gets.chomp
 guess_with_letters = game.guess_include(letter_entered)
 p guess_with_letters
+guesses_left = guess.length - game.guess_count
+p "You have #{guesses_left} guesses left!"
 if guess == letter_entered
-	puts "YOU WIN! You guessed it!"
+	puts "You guessed it!"
 	break
 end
 end
+
+puts "The word was #{guess}."
