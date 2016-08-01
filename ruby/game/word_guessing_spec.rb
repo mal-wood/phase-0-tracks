@@ -13,6 +13,6 @@ it "replaced the given string with as many underscores as the length of the stri
 end 
 
 it "places any correctly guessed letters into the string and returns the rest as underscores" do
-	expect(game.guess_include("s")).to eq "s _ _ _ _ _ _ "
+	expect(game.guess_include("s")).to eq "s _ _ _ _ _ "
 end
 end
