@@ -2,24 +2,24 @@
 
 class WordGuessing
 
-	attr_accessor :word_array, :guess_count
+	attr_accessor :letter_array, :guess_count
 	attr_reader :is_over
 
 	def initialize 
-		@word_array = []
+		@letter_array = []
 		@is_over = false
 		@new_string = ""
 		@guess_count = 0
 	end
 
 	def underscore(word)
-		@word_array = word.split("")
-		secret_letters = "_ " * @word_array.length
+		@letter_array = word.split("")
+		secret_letters = "_ " * @letter_array.length
 	end
 
 	def guess_include(guess)
 		new_string = ""
-		@word_array.each do |x|
+		@letter_array.each do |x|
 			if guess.include? x
 				new_string << x
 			else 
