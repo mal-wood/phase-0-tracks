@@ -11,21 +11,23 @@ class WordGuessing
 		@new_string = ""
 	end
 
+	#Changes each letter in inputted word to underscore and space
 	def underscore(word)
 		@word_array = word.split("")
 		secret_letters = "_ " * @word_array.length
 	end
 
+	#If correct letter is guessed, letter is added to the phrase. Other letters are filled in as an underscore.
 	def guess_include(guess)
-		new_string = ""
 		@word_array.each do |x|
 			if guess.include? x
-				new_string << x
+				@new_string << x
+				@new_string
 			else 
-				new_string << "_ "
+				@new_string << "_ "
 			end
 		end
-		new_string
+		@new_string
 	end
 end
 
@@ -41,7 +43,7 @@ letter_entered = gets.chomp
 guess_with_letters = game.guess_include(letter_entered)
 p guess_with_letters
 if guess == letter_entered
-	puts "You guessed it!"
+	puts "YOU WIN! You guessed it!"
 	break
 end
 end
