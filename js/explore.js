@@ -5,3 +5,11 @@
 function reverse(string) {
 	return string.split('').reverse().join('');
 }
+
+var reverse_result = reverse("hello")
+
+if (5 > 4){
+	console.log(reverse_result);
+}
+
+console.log(reverse("september"))
