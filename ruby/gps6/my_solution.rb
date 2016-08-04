@@ -104,3 +104,18 @@ alaska.virus_effects
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+#The hash rocket and then the colon key indicator. Using the two different styles really makes sense of a complex data structure like STATE_DATA. 
+
+# What does require_relative do? How is it different from require?
+# Require relative is when you are trying to link this file with a path in relation to this file. Require would require an absolute path.
+
+# What are some ways to iterate through a hash?
+# Iterate with each/map
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# Mostly just that they seemed really unnecessary- they were kind of cluttering the class. 
+
+# What concept did you most solidify in this challenge?
+# Learned quite a lot about instance variables/scope in general and also how to iterate through a more complex data structure. 
