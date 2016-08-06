@@ -4,9 +4,9 @@
 
 var longestWord = function(array){
 	var winner_length = 0;
-	var winner = ''
+	var winner
 		for (var i = 0; i < array.length; i++) {
-			if (array[i].length > winner_length.length){
+			if (array[i].length > winner_length){
 				winner_length = array[i].length;
 				winner = array[i];
 			}
@@ -14,10 +14,13 @@ var longestWord = function(array){
 	console.log(winner)
 }
 
-longestWord(["bird", "house", "hat"])
+// // driver code to test longestWord funtion 
 
-//////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
+longestWord(["bird", "house", "hat", "platypus","fish"])
+longestWord(["everybody", "clap", "your", "hands"])
+longestWord(["where", "is", "the", "longest", "word"])
+
+/////////////////////////////////////////////////////////////
 
 // // write method that accepts two hashes
 // // if a key value pair in one object mathches a key value pair in another, return true 
@@ -37,9 +40,14 @@ longestWord(["bird", "house", "hat"])
 
 // keyvalueMatch(person_one, person_two)
 
-//////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
 
 // write a function that takes an integer
 // generate an array that contains that many strings of random words
 // words should have min of 1 characters and max of 10 
+
+// var randomData = function(integer) {
+// 	console.log((a...z).sample)
+
+// }
