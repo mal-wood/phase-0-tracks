@@ -22,6 +22,17 @@ output when I check the table
 
 3.
 input
+select * from students, teachers where students.teacher_id = teachers.id;
+
+output
+1|Jessica Jones|4|true|1|1|Mr. Smith
+2|Donald Trump|5|false|2|2|Mrs. Appleby
+3|Tammy Sherwood|6|true|1|1|Mr. Smith
+4|Jared Johnson|7|false|2|2|Mrs. Appleby
+5|Laura Shinn|2|true|1|1|Mr. Smith
+
+4.
+input
 select students.name, teachers.name FROM students JOIN teachers on students.teacher_id=teachers.id;
 
 output
@@ -30,3 +41,10 @@ Donald Trump|Mrs. Appleby
 Tammy Sherwood|Mr. Smith
 Jared Johnson|Mrs. Appleby
 Laura Shinn|Mr. Smith
+
+5. 
+input 
+delete from teachers where name = "Mrs. Appleby";
+
+output
+1|Mr. Smith
