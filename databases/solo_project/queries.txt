@@ -48,3 +48,27 @@ delete from teachers where name = "Mrs. Appleby";
 
 output
 1|Mr. Smith
+
+// researched joins
+CROSS JOIN 
+
+select students.name, teachers.name from students cross join teachers;
+
+Jessica Jones|Mr. Smith
+Jessica Jones|Mrs. Appleby
+Donald Trump|Mr. Smith
+Donald Trump|Mrs. Appleby
+Tammy Sherwood|Mr. Smith
+Tammy Sherwood|Mrs. Appleby
+Jared Johnson|Mr. Smith
+Jared Johnson|Mrs. Appleby
+Laura Shinn|Mr. Smith
+Laura Shinn|Mrs. Appleby
+
+INNER JOIN w/ conditional
+
+select students.name, teachers.name from students in teachers on students.name = "Laura Shinn";
+
+Laura Shinn|Mr. Smith
+Laura Shinn|Mrs. Appleby
+
