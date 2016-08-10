@@ -24,3 +24,10 @@ The Beagle Nightclub|1|Terrible!!|Bradford|Pitt
 4. SELECT businesses.name, reviews.stars, reviews.comment, users.firstname, users.lastname FROM businesses INNER JOIN reviews ON reviews.business_id = businesses.id INNER JOIN users ON reviews.user_id = users.id WHERE businesses.name = "Amir's Towing";
 
 Amir's Towing|5|Absolutely delicious|Angela|Jolie
+
+// Join all tables and return data 
+SELECT * FROM businesses INNER JOIN reviews ON reviews.business_id = businesses.id INNER JOIN users ON reviews.user_id = users.id;
+
+2|Amir's Towing|1|5|Absolutely delicious|2|3|3|Angela|Jolie
+1|Grundy Hollow Wedding Chapel|2|4|It was alright...|1|2|2|Mandy|Kaling
+3|The Beagle Nightclub|3|1|Terrible!!|3|1|1|Bradford|Pitt
