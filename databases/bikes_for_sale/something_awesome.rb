@@ -30,3 +30,8 @@ db.execute(create_table_cmd)
 def create_bike_info (db, name, color, price, email, miles_away)
 	db.execute("INSERT INTO bike_info(name, color, price, email, miles_away) VALUES (?, ?, ?, ?, ?)", [name, color, price, email, miles_away])
 end 
+
+# creating the bikes and pushing them into the database
+10.times do 
+	create_bike_info(db, Faker::Name.name, Faker::Color.color_name.upcase, Faker::Number.number(3), Faker::Internet.email, Faker::Number.between(1, 25) )
+end
