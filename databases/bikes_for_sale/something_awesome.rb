@@ -7,3 +7,21 @@
 # require necessary gems
 	require 'sqlite3'
 	require 'faker'
+
+# create the database for the cities 
+db = SQLite3::Database.new ("bikes_for_sale.db")
+
+# create the table and setting up what columns we want it to have 
+create_table_cmd = <<-SQL
+	CREATE TABLE IF NOT EXISTS bike_info (
+		id INTEGER PRIMARY KEY,
+		name VARCHAR(255),
+		color VARCHAR(255),
+		price INT,
+		email VARCHAR(255),
+		miles_away INT
+		)
+	SQL
+
+# actually create the table 
+db.execute(create_table_cmd)
