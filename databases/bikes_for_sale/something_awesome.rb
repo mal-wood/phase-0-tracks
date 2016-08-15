@@ -47,3 +47,17 @@ continue = gets.chomp
 bike_info.each do |bike|
 	p "Bike Number: #{bike['id']} || Color: #{bike['color']} || Cost: $#{bike['price']} || Located: #{bike['miles_away']} miles away"
 end
+
+# ask user to choose the product number of the bike they are interestd in 
+print "Please type the product number of the bike you are interested in to get the owner's contact info!"
+bike_choice = gets.chomp 
+
+bike_info.each do |bic|
+	if bike_choice.to_i == bic['id']
+		print "#{bic['color'].upcase} is a great choice :)! Email #{bic['name']} at #{bic['email']} for more details about the bike!"
+	end
+end
+
+
+# end
+
