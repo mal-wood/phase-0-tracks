@@ -1,17 +1,16 @@
 # Ideas for program 
-## User is welcomed and given a list of 10 randomly generated cities
-## The user is then asked which city they would like to visit on a whim 
-## The user chooses by typing the ID of the city 
-## Program prints a statement about the user's upcoming trip 
+## User is welcomed and given a list of 10 randomly generated bikes for sale
+## The user is asked to type the product number of the bike they want
+## User is given contact info for person selling
 
 # require necessary gems
 	require 'sqlite3'
 	require 'faker'
 
-# create the database for the cities 
+# create the database for the bikes
 db = SQLite3::Database.new ("bikes_for_sale.db")
 
-# create the table and setting up what columns we want it to have 
+# create the table and setting up columns
 create_table_cmd = <<-SQL
 	CREATE TABLE IF NOT EXISTS bike_info (
 		id INTEGER PRIMARY KEY,
@@ -40,24 +39,24 @@ end
 db.results_as_hash = true
 bike_info = db.execute("SELECT * FROM bike_info")
 
+## USER INTERFACE
 puts "***** Get a bike and get outside! Press ENTER for a list of bikes for sale near you. *****"
 continue = gets.chomp
-
 
 bike_info.each do |bike|
 	p "Bike Number: #{bike['id']} || Color: #{bike['color']} || Cost: $#{bike['price']} || Located: #{bike['miles_away']} miles away"
 end
 
-# ask user to choose the product number of the bike they are interestd in 
+# ask user to choose the product number of the bike they are interested in 
 print "Please type the product number of the bike you are interested in to get the owner's contact info!"
 bike_choice = gets.chomp 
 
+# give user contact info for bike they want
 bike_info.each do |bic|
 	if bike_choice.to_i == bic['id']
 		print "#{bic['color'].upcase} is a great choice :)! Email #{bic['name']} at #{bic['email']} for more details about the bike!"
 	end
 end
-
 
 # end
 
