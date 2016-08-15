@@ -25,3 +25,8 @@ create_table_cmd = <<-SQL
 
 # actually create the table 
 db.execute(create_table_cmd)
+
+# method to generate the bike info
+def create_bike_info (db, name, color, price, email, miles_away)
+	db.execute("INSERT INTO bike_info(name, color, price, email, miles_away) VALUES (?, ?, ?, ?, ?)", [name, color, price, email, miles_away])
+end 
