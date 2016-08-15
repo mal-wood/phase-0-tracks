@@ -35,3 +35,15 @@ end
 10.times do 
 	create_bike_info(db, Faker::Name.name, Faker::Color.color_name.upcase, Faker::Number.number(3), Faker::Internet.email, Faker::Number.between(1, 25) )
 end
+
+# setting the bikes table as a hash and returning the bikes ID and NAME 
+db.results_as_hash = true
+bike_info = db.execute("SELECT * FROM bike_info")
+
+puts "***** Get a bike and get outside! Press ENTER for a list of bikes for sale near you. *****"
+continue = gets.chomp
+
+
+bike_info.each do |bike|
+	p "Bike Number: #{bike['id']} || Color: #{bike['color']} || Cost: $#{bike['price']} || Located: #{bike['miles_away']} miles away"
+end
