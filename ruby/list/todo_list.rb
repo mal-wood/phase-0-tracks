@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class TodoList
 	def initialize(list)
 		@list = list
@@ -19,4 +20,7 @@ class TodoList
 		@list[0]
 	end
 
+=======
+class TodoList 
+>>>>>>> solo_werk
 end
