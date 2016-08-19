@@ -49,3 +49,13 @@ end
 get '/contact' do 
   "Address: 1 Unicorn Lane<br>Winnemuca, Nevada 44444"
 end
+
+# great_job route 
+get '/great_job' do 
+  name = params[:name]
+  if name 
+    "Good job, #{params[:name]}!"
+  else 
+    "Good job!"
+  end
+end
