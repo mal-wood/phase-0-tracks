@@ -12,9 +12,13 @@ get '/' do
   @students = db.execute("SELECT * FROM students")
   erb :home
 end
-
+ 
 get '/students/new' do
   erb :new_student
+end
+
+get '/nickname/new' do 
+    erb :nickname
 end
 
 # create new students via
@@ -31,6 +35,11 @@ get '/campuses' do
 	@student_sd = db.execute("SELECT * FROM students WHERE campus='SD'")
 	@student_chi = db.execute("SELECT * FROM students WHERE campus='CHI'")
 	erb :campuses
+end
+
+post '/nickname' do 
+    db.execute("UPDATE students SET nickname=? WHERE name=?", [params['nickname'], params['name']])
+    redirect '/'
 end
 
 # add static resources
