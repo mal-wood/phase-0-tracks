@@ -1,0 +1,83 @@
+body {
+	text-align: center;
+	font-family: 'Denk One', sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+#first_flavor {
+	width: 200px;
+	height:200px;
+	background-color: #334D5C;
+	display:inline-block;
+	text-align: center;
+}
+
+#second_flavor {
+	width: 200px;
+	height:200px;
+	background-color: #45B29D;
+	display:inline-block;
+	text-align: center;
+
+}
+
+#third_flavor {
+	width: 200px;
+	height: 200px;
+	background-color: #EFC94C;
+	display:inline-block;
+	text-align: center;
+}
+
+#fourth_flavor {
+	width: 200px;
+	height: 200px;
+	background-color: #E27A3F;
+	display:inline-block;
+	text-align: center;
+}
+
+#fifth_flavor {
+	width: 200px;
+	height: 200px;
+	background-color: #DF5A49;
+	display:inline-block;
+	text-align: center;
+
+}
+
+#sixth_flavor {
+	width: 200px;
+	height: 200px;
+	background-color: #ACEBAE;
+	display:inline-block;
+	text-align: center;
+}
+
+#seventh_flavor {
+	width: 200px;
+	height:200px;
+	background-color: #FFFF9D;
+	display:inline-block;
+	text-align: center;
+}
+
+#eighth_flavor {
+	width: 200px;
+	height:200px;
+	background-color: #C9DE55;
+	display:inline-block;
+	text-align: center;
+
+}
+
+#ninth_flavor {
+	width: 200px;
+	height: 200px;
+	background-color: #677E52;
+	display:inline-block;
+	text-align: center;
+}
