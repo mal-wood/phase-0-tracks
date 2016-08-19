@@ -67,3 +67,10 @@ get '/add/:numberone/:numbertwo' do
   sum = params[:numberone].to_i + params[:numbertwo].to_i
   "#{params[:numberone]} + #{params[:numbertwo]} is #{sum} "
 end
+
+# Make a route that allows the user to search the database in some way 
+get '/studentsinfo/:name' do
+  student = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])[0]
+  student
+end
+
