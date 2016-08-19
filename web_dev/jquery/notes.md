@@ -14,3 +14,5 @@ Short breaks are important to me. Even just 10-15 minutes to look away from my c
 _______________
 
 *BRO. WHAT WORKED?*
+
+It worked well to start with a youtube introduction to jQuery and then move to Codeacademy for some practical application/syntax. After, I took a look at various articles and checked out some cheat sheets. I started working on my project AS I was researching so I could build on it as I learned. 
