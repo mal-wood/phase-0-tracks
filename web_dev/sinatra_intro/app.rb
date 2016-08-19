@@ -59,3 +59,11 @@ get '/great_job' do
     "Good job!"
   end
 end
+
+# A route that uses route parameters to add two numbers and 
+# respond with the result
+
+get '/add/:numberone/:numbertwo' do
+  sum = params[:numberone].to_i + params[:numbertwo].to_i
+  "#{params[:numberone]} + #{params[:numbertwo]} is #{sum} "
+end
