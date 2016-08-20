@@ -11,7 +11,7 @@
   <p>Click <a href="nickname/new">here</a> to update your nickname.</p>
   <ul>
     <% @students.each do |student| %>
-      <li><%= student['name'] %>, <%= student['age'] %></li>
+      <li><%= student['name'] %>, <%= student['age'] %>, <%= student['nickname'] %></li>
     <% end %>
   </ul>
 </body>
