@@ -18,3 +18,11 @@ The advantages are:
 *Optional bonus question: Why is it considered a bad idea to run programs as the root user on a Linux system?*
 
 Programs should be run on a user level. Admin tasks should be run as the root user. If you are logged in as root, this means that all applications are running at that level which exposes your system to viruses.
+
+*DOM properties*
+
+background
+draggable
+border collapse 
+clientHeight
+textContent
