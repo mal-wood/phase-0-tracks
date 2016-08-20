@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Locations</title>
+</head>
+<body>
+	<h1>Locations</h1>
+	<h2>San Francisco Campus</h2>
+	<ul>
+		<% @student_sf.each do |student| %>
+		<li><%= student['name'] %>, <%= student['age'] %></li>
+		<% end %>
+	</ul>
+	<h2>Seattle Campus</h2>
+	<ul>
+		<% @student_sea.each do |student| %>
+		<li><%= student['name'] %>, <%= student['age'] %></li>
+		<% end %>
+	</ul>
+	<h2>New York Campus</h2>
+	<ul>
+		<% @student_nyc.each do |student| %>
+		<li><%= student['name'] %>, <%= student['age'] %></li>
+		<% end %>
+	</ul>
+	<h2>San Diego Campus</h2>
+	<ul>
+		<% @student_sd.each do |student| %>
+		<li><%= student['name'] %>, <%= student['age'] %></li>
+		<% end %>
+	</ul>
+	<h2>Chicago Campus</h2>
+	<ul>
+		<% @student_chi.each do |student| %>
+		<li><%= student['name'] %>, <%= student['age'] %></li>
+		<% end %>
+	</ul>
+</body>
+</html>
