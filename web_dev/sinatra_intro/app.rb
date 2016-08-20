@@ -54,7 +54,7 @@ end
 get '/great_job' do 
   name = params[:name]
   if name 
-    "Good job, #{params[:name]}!"
+    "Good job, #{name}!"
   else 
     "Good job!"
   end
@@ -69,8 +69,8 @@ get '/add/:numberone/:numbertwo' do
 end
 
 # Make a route that allows the user to search the database in some way 
-get '/studentsinfo/:name' do
-  student = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])[0]
+get '/studentsinfo/:age' do
+  student = db.execute("SELECT * FROM students WHERE age=?", [params[:age]])[0]
   student
 end
 
